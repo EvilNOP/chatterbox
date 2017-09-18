@@ -8,6 +8,6 @@ var es = new WebSocketServer({
 
 console.log('websockets server started');
 
-ws.on('connection', function (scoket) {
+ws.on('connection', function (socket) {
   console.log('client connection established');
 });
