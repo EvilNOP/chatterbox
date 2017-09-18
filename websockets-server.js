@@ -1,0 +1,13 @@
+var WebSocket = require('ws');
+
+var WebSocketServer = WebSocket.Server;
+var port = 3001;
+var es = new WebSocketServer({
+  port: port
+});
+
+console.log('websockets server started');
+
+ws.on('connection', function (scoket) {
+  console.log('client connection established');
+});
