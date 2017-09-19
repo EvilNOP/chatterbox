@@ -14,6 +14,14 @@ class ChatMessage {
     this.user = u;
     this.time = t;
   }
+  
+  serialize() {
+    return {
+      user: this.user,
+      message: this.message,
+      time: this.time
+    }
+  }
 }
 
 export default ChatApp;
