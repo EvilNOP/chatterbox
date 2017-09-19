@@ -12,7 +12,7 @@
   },
   "browserify": {
     "transform": [
-      ["babelify", {"preset": ["es2015"], "sourceMap": true}]
+      ["babelify", {"presets": ["es2015"], "sourceMap": true}]
     ]
   },
   "repository": {
