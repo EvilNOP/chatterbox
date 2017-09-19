@@ -5,3 +5,7 @@ function init(url) {
   
   console.log('connecting...');
 }
+
+export default {
+  init,
+}
