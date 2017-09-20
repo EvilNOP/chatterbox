@@ -30,4 +30,7 @@ function sendMessage(payload) {
 
 export default {
   init,
+  registerOpenHandler,
+  registerMessageHandler,
+  sendMessage
 }
