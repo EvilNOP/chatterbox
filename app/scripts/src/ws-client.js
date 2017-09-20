@@ -11,7 +11,17 @@ function registerOpenHandler(handlerFunction) {
     console.log('open');
     
     handlerFunction();
-  }
+  };
+}
+
+function registerMessageHandler(handlerFunction) {
+  socket.onmessage = (e) => {
+    console.log('message', e.data);
+    
+    let data = JSON.parse(e.data);
+    
+    handlerFunction(data);
+  };
 }
 
 export default {
