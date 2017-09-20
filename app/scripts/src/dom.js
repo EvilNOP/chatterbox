@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class ChatForm {
+export class ChatForm {
   constructor(formSel, inputSel) {
     this.$form = $(formSel);
     this.$input = $(inputSel);
