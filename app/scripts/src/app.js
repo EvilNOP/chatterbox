@@ -3,6 +3,14 @@ import socket from './ws-client';
 class ChatApp {
   constructor() {
     socket.init('ws://localhost:3001');
+    socket.registerOpenHandler(() => {
+      let message = new ChatMessage({ message: 'pow!' });
+      
+      socket.sendMessage(message);
+    });
+    socket.registerMessageHandler((data) => {
+      console.log(data);
+    });
   }
 }
 
