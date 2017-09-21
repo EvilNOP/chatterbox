@@ -1,5 +1,5 @@
 import socket from './ws-client';
-import {ChatForm} from './dom';
+import {ChatForm, ChatList} from './dom';
 
 const FORM_SELECTOR = '[data-chat="chat-form"]';
 const INPUT_SELECTOR = '[data-chat="message-input"]';
