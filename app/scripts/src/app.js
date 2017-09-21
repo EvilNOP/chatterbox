@@ -1,8 +1,8 @@
 import socket from './ws-client';
 import {ChatForm} from './dom';
 
-const FORM_SELECTOR = ['data-chat="chat-form"'];
-const INPUT_SELECTOR = ['data-chat="message-input"'];
+const FORM_SELECTOR = '[data-chat="chat-form"]';
+const INPUT_SELECTOR = '[data-chat="message-input"]';
 
 class ChatApp {
   constructor() {
