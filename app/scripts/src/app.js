@@ -25,7 +25,7 @@ class ChatApp {
       
       let message = new ChatMessage(data);
       
-      this.ChatList.drawMessage(message);
+      this.ChatList.drawMessage(message.serialize());
     });
   }
 }
