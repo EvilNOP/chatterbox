@@ -14,7 +14,7 @@ class ChatApp {
     
     socket.registerOpenHandler(() => {
       this.chatForm.init((data) => {
-        let message = new ChatMessage(data);
+        let message = new ChatMessage({message: data});
         
         socket.sendMessage(message.serialize());
       });
