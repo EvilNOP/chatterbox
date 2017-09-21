@@ -11,6 +11,7 @@ class ChatApp {
     this.ChatList = new ChatList(LIST_SELECTOR, 'wonderwoman');
     
     socket.init('ws://localhost:3001');
+    
     socket.registerOpenHandler(() => {
       this.chatForm.init((data) => {
         let message = new ChatMessage(data);
@@ -18,8 +19,13 @@ class ChatApp {
         socket.sendMessage(message.serialize());
       });
     });
+    
     socket.registerMessageHandler((data) => {
       console.log(data);
+      
+      let message = new ChatMessage(data);
+      
+      this.ChatList.drawMessage(message);
     });
   }
 }
