@@ -19,3 +19,10 @@ export class ChatForm {
     this.$form.find('button').on('click', () => this.$form.submit());
   }
 }
+
+export class ChatList {
+  constructor(listSel, username) {
+    this.$list = $(listSel);
+    this.username = username;
+  }
+}
