@@ -11,3 +11,11 @@ class Store {
     this.api.setItem(this.key, value);
   }
 }
+
+export class UserStore extends Storage {
+  constructor(key) {
+    super(sessionStorage);
+    
+    this.key = key;
+  }  
+}
