@@ -27,6 +27,8 @@ class ChatApp {
         
         socket.sendMessage(message.serialize());
       });
+      
+      this.ChatList.init();
     });
     
     socket.registerMessageHandler((data) => {
