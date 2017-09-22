@@ -7,6 +7,12 @@ function createGravatarUrl(username) {
   return `http://www.gravatar.com/avatar/${userhash.toString()}`;
 }
 
+export function promptForUsername() {
+  let username = prompt('Enter a username');
+  
+  return username.toLowerCase();
+}
+
 export class ChatForm {
   constructor(formSel, inputSel) {
     this.$form = $(formSel);
