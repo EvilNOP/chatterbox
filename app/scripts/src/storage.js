@@ -12,10 +12,10 @@ class Store {
   }
 }
 
-export class UserStore extends Storage {
+export class UserStore extends Store {
   constructor(key) {
     super(sessionStorage);
     
     this.key = key;
-  }  
+  }
 }
